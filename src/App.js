@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+  // useSate = Estrutura para declarar um state dentro de um componente funcional
+  // (0) = valor do state inicial
+  // count = variavel onde será armazenado o state que será preservado pelo React
+  // setCount = funcão que seta o novo state dentro da variavél atribuida
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   );
 }
